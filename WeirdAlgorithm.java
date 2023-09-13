@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ProblemOne{
+public class WeirdAlgorithm{
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
 
@@ -16,5 +16,7 @@ public class ProblemOne{
             }
             System.out.print(" " + n);
         }
+
+        scan.close();
     }
 }
