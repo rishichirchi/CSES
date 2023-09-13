@@ -12,12 +12,11 @@ public class IncreasingArray {
             a[i] = scan.nextInt();
         }
 
-        int count = 0;
+        long count = 0;
         for (int i = 0; i < n - 1; i++) {
-
-            while (a[i] > a[i + 1]) {
-                a[i + 1] += 1;
-                count++;
+            if(a[i] > a[i + 1]){
+                count += a[i] - a[i+1];
+                a[i+1] = a[i];
             }
         }
 
