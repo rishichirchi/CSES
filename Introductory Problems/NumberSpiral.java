@@ -6,17 +6,24 @@ public class NumberSpiral {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pr = new PrintWriter(System.out);
         
-        long t = Integer.parseInt(br.readLine());
+        String s = br.readLine();
 
-        while(t-->0){
-            long y = Integer.parseInt(br.readLine());
-            long x = Integer.parseInt(br.readLine());
-            
-            if(x == y){
-                pr.println((x*y)-(x-1));
+        long ans = 0;
+        long count = 0;
+        char ch = 'A';
+        for(char x : s.toCharArray()){
+            if(ch == x){
+                ++count;
+                ans = Math.max(ans, count);
             }
-
+            else{
+                ch = x;
+                count = 1;
+            }
         }
+
+        pr.println(ans);
+        
         pr.close();
 }
 }
